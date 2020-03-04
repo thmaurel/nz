@@ -1,0 +1,6 @@
+<div class="container">
+  <h1><%= @chapter.title %></h1>
+  <% @chapter.paragraphs.each do |chapter| %>
+    <p><%= chapter.content.html_safe %></p>
+  <% end %>
+</div>

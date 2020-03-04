@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Trip To NZ</h1>
   <% @chapters.each do |chapter| %>
-    <%= chapter.title %> aa
+  <p><%= link_to chapter.title, chapter_path(chapter) %></p>
   <% end %>
 </div>
 
