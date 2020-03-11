@@ -4,6 +4,7 @@
   <div class="parts-grid">
     <% @parts.each do |part| %>
       <div>
+        <%= cl_image_tag part.photo.key, height: 300, width: 400, crop: :fill if part.photo.attached? %>
         <h2><%= part.title %></h2>
         <ul>
           <% part.chapters.each do |chapter| %>

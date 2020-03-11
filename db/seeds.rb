@@ -8,15 +8,23 @@
 
 require "open-uri"
 
-# file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
-# article = Article.new(title: 'NES', body: "A great console")
-# article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 
 Chapter.destroy_all
 Part.destroy_all
 
+
+
+###############################################
+############      PART 1         ##############
+###############################################
+
+
+
 p1 = Part.new(title: "From Auckland to Raglan")
+file = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/p720x720/42399190_332181687346947_7747866125739753472_o.jpg?_nc_cat=107&_nc_sid=8024bb&_nc_ohc=i6emUEX0QG8AX9h-7Kh&_nc_ht=scontent-cdg2-1.xx&_nc_tp=6&oh=1e7042b85029ce6949ed2dd642da8c4d&oe=5E958275')
+p1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 p1.save
 
 c1 = Chapter.new(title: "Retour d'Hawaii", part: p1)
@@ -52,7 +60,15 @@ c3.content = "
 "
 c3.save
 
+
+###############################################
+############      PART 2         ##############
+###############################################
+
+
 p2 = Part.new(title: "On the way to Kerikeri")
+file2 = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/43271722_336132370285212_2082537918508826624_o.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_ohc=F9B22S7FSO4AX_J7XXW&_nc_ht=scontent-cdg2-1.xx&oh=aa697f37ff2bc0b6831434ba63a0b58c&oe=5E9058C4')
+p2.photo.attach(io: file2, filename: 'nes2.png', content_type: 'image/png')
 p2.save
 
 c4 = Chapter.new(title: "Route vers le Nord", part: p2)
@@ -105,7 +121,16 @@ c7.content = "
 "
 c7.save
 
+
+###############################################
+############      PART 3         ##############
+###############################################
+
+
+
 p3 = Part.new(title: "Kerikeri")
+file3 = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/45512046_347097209188728_2767759139806380032_o.jpg?_nc_cat=104&_nc_sid=8024bb&_nc_ohc=62erMljeEGwAX_GgBHE&_nc_ht=scontent-cdg2-1.xx&oh=513b4e31ab6613d74b95ed7de5fcc33a&oe=5E9257F6')
+p3.photo.attach(io: file3, filename: 'nes3.png', content_type: 'image/png')
 p3.save
 
 c8 = Chapter.new(title: "Lundi 10 Septembre – Captain Cook, Hawaii", part: p3)
@@ -180,7 +205,16 @@ c13.content = "
 "
 c13.save
 
+
+###############################################
+############      PART 4         ##############
+###############################################
+
+
+
 p4 = Part.new(title: "Du Nord au Sud")
+file4 = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/47438254_362064734358642_6459403141262606336_o.jpg?_nc_cat=109&_nc_sid=8024bb&_nc_ohc=GlwTx_MBRnMAX_6qJnz&_nc_ht=scontent-cdg2-1.xx&oh=14f3c4e191111e77dcc862763356e8b8&oe=5E8F8EFA')
+p4.photo.attach(io: file4, filename: 'nes4.png', content_type: 'image/png')
 p4.save
 
 c14 = Chapter.new(title: "Mardi 20 Novembre – Cape Reinga", part: p4)
@@ -207,7 +241,16 @@ c16.content = "
 "
 c16.save
 
+
+###############################################
+############      PART 5         ##############
+###############################################
+
+
+
 p5 = Part.new(title: "La Magie de Noël")
+file5 = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/s960x960/50822348_383042632260852_1115612261872828416_o.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_ohc=ZayUYtkxyC8AX9vaB00&_nc_ht=scontent-cdg2-1.xx&_nc_tp=7&oh=6f1a7f516b4b760af79c91f4344966de&oe=5EA490BB')
+p5.photo.attach(io: file5, filename: 'nes5.png', content_type: 'image/png')
 p5.save
 
 c17 = Chapter.new(title: "Mardi 25 Décembre – Queenstown", part: p5)
@@ -244,7 +287,16 @@ c19.content = "
 "
 c19.save
 
+
+###############################################
+############      PART 6         ##############
+###############################################
+
+
+
 p6 = Part.new(title: "Akaroa")
+file6 = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/56835647_420951168469998_7056436529215832064_o.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_ohc=i1HiXvmmdCcAX-bzjse&_nc_ht=scontent-cdt1-1.xx&oh=2b8007b4e9761802252ff7e1a3cc4ba9&oe=5E8F5C37')
+p6.photo.attach(io: file6, filename: 'nes6.png', content_type: 'image/png')
 p6.save
 
 c20 = Chapter.new(title: "Mercredi 2 Janvier – Akaroa", part: p6)
@@ -269,7 +321,16 @@ c21.content = "
 "
 c21.save
 
+
+###############################################
+############      PART 7         ##############
+###############################################
+
+
+
 p7 = Part.new(title: "The End")
+file7 = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/66642122_471250506773397_7909884661650685952_o.jpg?_nc_cat=106&_nc_sid=8024bb&_nc_ohc=KVZseBrj0VEAX9QxoT4&_nc_ht=scontent-cdt1-1.xx&oh=411562da94a64b35b38cbdd8fd6244bb&oe=5E968969')
+p7.photo.attach(io: file7, filename: 'nes7.png', content_type: 'image/png')
 p7.save
 
 c22 = Chapter.new(title: "Jeudi 28 Février – Bluff", part: p7)
