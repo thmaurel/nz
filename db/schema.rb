@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_25_112539) do
+ActiveRecord::Schema.define(version: 2020_03_04_165802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,15 @@ ActiveRecord::Schema.define(version: 2020_02_25_112539) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "content"
+    t.bigint "part_id", null: false
+    t.index ["part_id"], name: "index_chapters_on_part_id"
   end
 
-  create_table "paragraphs", force: :cascade do |t|
-    t.text "content"
-    t.bigint "chapter_id", null: false
+  create_table "parts", force: :cascade do |t|
+    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["chapter_id"], name: "index_paragraphs_on_chapter_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,5 +42,5 @@ ActiveRecord::Schema.define(version: 2020_02_25_112539) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "paragraphs", "chapters"
+  add_foreign_key "chapters", "parts"
 end

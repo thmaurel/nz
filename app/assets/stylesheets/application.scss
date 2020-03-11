@@ -11,3 +11,24 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import url('https://fonts.googleapis.com/css?family=Merienda:400,700&display=swap');
+
+body {
+  font-family: 'Merienda', cursive;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+// #image {
+//   width: 400px;
+//   height: 400px;
+//   background-size: cover;
+//   display:flex;
+//   justify-content: center;
+//   align-items:center;
+
+//   h1 {
+//     color:white;
+//   }
+// }

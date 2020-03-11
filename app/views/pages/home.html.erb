@@ -1,9 +1,19 @@
+<%= link_to "Login", new_user_session_path, class: "nav-link" %>
 <div class="container">
-  <h1>Trip To NZ</h1>
-  <% @chapters.each do |chapter| %>
-  <p><%= link_to chapter.title, chapter_path(chapter) %></p>
-  <% end %>
+<!--   <h1>Trip To NZ</h1> -->
+  <div class="parts-grid">
+    <% @parts.each do |part| %>
+      <div>
+        <h2><%= part.title %></h2>
+        <ul>
+          <% part.chapters.each do |chapter| %>
+            <li><%= link_to chapter.title, chapter_path(chapter) %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 
-<%= console %>
+<%# console %>
